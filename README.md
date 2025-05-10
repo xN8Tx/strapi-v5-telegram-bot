@@ -20,10 +20,6 @@ yarn add strapi-v5-telegram-bot
 - Send messages to your telegram bot from admin panel and code
 - Manage users and bot token in admin panel
 
-## ✋ Need to know
-
-- To get `userId` you can use any [telegram bot which shows user id](https://www.google.com/search?q=How+to+find+your+User+ID+in+Telegram).
-
 ## 🌟 Usage
 
 ### 1. Configure Bot Token
