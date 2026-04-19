@@ -44,7 +44,7 @@ const telegramSender = ({ strapi }: { strapi: Core.Strapi }) => ({
     return true;
   },
 
-  async sendMessage(message: string) {
+  async sendMessage(message: string, telegramBody: any = {}) {
     if (!this.token) {
       const isTokenSet = await this.setTelegramId();
       if (!isTokenSet) return;
@@ -64,6 +64,7 @@ const telegramSender = ({ strapi }: { strapi: Core.Strapi }) => ({
         body: JSON.stringify({
           chat_id: el,
           text: message,
+          ...telegramBody,
         }),
       });
     });
